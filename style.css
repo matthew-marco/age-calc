@@ -110,7 +110,7 @@ main .holder {
 main .holder .day ,
 main .holder .month ,
 main .holder .year{
-  max-width: calc(100% / 3.2);
+  max-width: calc(100% / 4);
 
 }
 main .holder .day p,
@@ -200,6 +200,7 @@ main .line img {
   main .holder{
     gap: 5px;
     max-width: 100%;
+    justify-content: space-evenly;
   }
   .middle {
     max-width:-webkit-fill-available ;
