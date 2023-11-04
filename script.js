@@ -14,10 +14,12 @@ button.addEventListener("click", () => {
     yearinput.parentElement.classList.remove("empty");
     yearinput.parentElement.classList.remove("error");
     yearinput.parentElement.classList.add("empty");
+    yearvalid = false;
   } else if (yearinput.value > date.getFullYear()) {
     yearinput.parentElement.classList.remove("empty");
     yearinput.parentElement.classList.remove("error");
     yearinput.parentElement.classList.add("error");
+    yearvalid = false;
   } else {
     yearvalid = true;
     yearinput.parentElement.classList.remove("empty");
@@ -28,10 +30,12 @@ button.addEventListener("click", () => {
     monthinput.parentElement.classList.remove("empty");
     monthinput.parentElement.classList.remove("error");
     monthinput.parentElement.classList.add("empty");
+    monthvalid = false;
   } else if (monthinput.value > 12) {
     monthinput.parentElement.classList.remove("empty");
     monthinput.parentElement.classList.remove("error");
     monthinput.parentElement.classList.add("error");
+    monthvalid = false;
   } else {
     monthvalid = true;
     monthinput.parentElement.classList.remove("empty");
@@ -42,10 +46,12 @@ button.addEventListener("click", () => {
     dayinput.parentElement.classList.remove("empty");
     dayinput.parentElement.classList.remove("error");
     dayinput.parentElement.classList.add("empty");
+    dayvalid = false;
   } else if (dayinput.value > 31) {
     dayinput.parentElement.classList.remove("empty");
     dayinput.parentElement.classList.remove("error");
     dayinput.parentElement.classList.add("error");
+    dayvalid = false;
   } else {
     dayvalid = true;
     dayinput.parentElement.classList.remove("empty");
@@ -59,9 +65,6 @@ button.addEventListener("click", () => {
     const age = new Date(agediff);
     yearvalue.innerHTML = Math.floor(agediff / 31536000000);
     monthvalue.innerHTML = age.getUTCMonth();
-    dayvalue.innerHTML = age.getUTCDate() - age.getUTCDay() ;
+    dayvalue.innerHTML = age.getUTCDate() - age.getUTCDay();
   }
 });
-
-
-
